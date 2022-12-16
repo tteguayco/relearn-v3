@@ -24,7 +24,7 @@ const CustomMenu = ({ children }: CustomMenuProps) => (
             borderRadius: 10,
             ":hover": {
               color: "#E4ECFE",
-              backgroundColor: "#362F78"
+              backgroundColor: "#003b63"
             },
             fontWeight: "bold",
             fontSize: 14
@@ -43,7 +43,7 @@ export const CustomSidebar = () => {
     <Box height="100vh" display="flex">
       <Sidebar
         width="280px"
-        backgroundColor="#42389D"
+        backgroundColor="#004A7C"
       >
           <CustomMenu>
             <MenuItem icon={<CodeIcon fontSize="small" />}>Query Editor</MenuItem>

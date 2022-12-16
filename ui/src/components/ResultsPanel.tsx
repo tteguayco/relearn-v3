@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import { useState } from 'react';
 import { TabPanel } from '@mui/lab';
 import { SQLTranslation } from './SQLTranslation';
+import { QueryResults } from './QueryResults';
 
 interface StyledTabsProps {
   children?: React.ReactNode;
@@ -16,7 +17,7 @@ const StyledTabs = styled((props: StyledTabsProps) => (
     {...props}
     TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" /> }}
   />
-))({
+))(({ theme }) => ({
   '& .MuiTabs-indicator': {
     display: 'flex',
     justifyContent: 'center',
@@ -25,9 +26,9 @@ const StyledTabs = styled((props: StyledTabsProps) => (
   '& .MuiTabs-indicatorSpan': {
     maxWidth: 40,
     width: '100%',
-    backgroundColor: '#635ee7',
+    backgroundColor: "#0078c9",
   },
-});
+}));
 
 interface StyledTabProps {
   label: string;
@@ -47,7 +48,8 @@ const StyledTab = styled((props: StyledTabProps) => (
     // color: 'rgba(100, 95, 228, 0.32)',
   },
   '&.Mui-focusVisible': {
-    backgroundColor: 'rgba(100, 95, 228, 0.32)',
+    color: theme.palette.primary,
+    backgroundColor: theme.palette.primary,
   },
 }));
 
@@ -71,11 +73,11 @@ export const ResultsPanel = () => {
         aria-label="results-tabs"
       >
         <StyledTab value={TabValues.Results} label="Results (20)" />
-        <StyledTab value={TabValues.SQLTranslation} label="SQL Translation" />
+        <StyledTab value={TabValues.SQLTranslation} label="Equivalent SQL" />
       </StyledTabs>
 
       <TabPanel value={TabValues.Results}>
-
+        <QueryResults />
       </TabPanel>
       <TabPanel value={TabValues.SQLTranslation}>
         <SQLTranslation />
