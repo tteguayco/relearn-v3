@@ -19,6 +19,8 @@ const CustomMenu = ({ children }: CustomMenuProps) => (
             color: disabled ? '#B4C6FC' : '#E4ECFE',
             backgroundColor: active ? '#362F78' : undefined,
             margin: 10,
+            marginRight: 15,
+            paddingLeft: 10,
             borderRadius: 10,
             ":hover": {
               color: "#E4ECFE",
