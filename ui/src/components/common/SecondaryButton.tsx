@@ -10,14 +10,14 @@ interface StyledButtonProps {
 const StyledButton = styled((props: StyledButtonProps) => (
   <Button {...props} />
 ))(({ theme }) => ({
-  color: 'white',
-  backgroundColor: theme.palette.primary.main,
-  '&:hover': {
-    backgroundColor: theme.palette.secondary.main,
-    color: 'white',
-  },
+  color: theme.palette.common.dark,
+  backgroundColor: theme.palette.common.grey1,
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
+  fontWeight: 'bold',
+  '&:hover': {
+    backgroundColor: theme.palette.common.grey1,
+  },
 }));
 
 interface Props {
@@ -25,7 +25,7 @@ interface Props {
   startIcon: JSX.Element
 };
 
-export const PrimaryButton = ({ children, ...props }: Props) => {
+export const SecondaryButton = ({ children, ...props }: Props) => {
   return (
     <StyledButton
       {...props}

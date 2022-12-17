@@ -60,9 +60,9 @@ export const CustomSidebar = () => {
             }}
           >
             {collapsed ? (
-                <KeyboardDoubleArrowRightIcon color="secondary" />
+                <KeyboardDoubleArrowRightIcon color="info" />
               ) : (
-                <KeyboardDoubleArrowLeftIcon color="secondary" />
+                <KeyboardDoubleArrowLeftIcon color="info" />
             )}
           </IconButton>
       </Sidebar>

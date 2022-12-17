@@ -1,8 +1,11 @@
 import Editor, { DiffEditor, useMonaco, loader } from "@monaco-editor/react";
 import { Divider, Stack } from "@mui/material";
 import { Box } from "@mui/system";
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import SaveIcon from '@mui/icons-material/Save';
 import { PrimaryButton } from "./common/PrimaryButton";
 import { ResultsPanel } from "./ResultsPanel";
+import { SecondaryButton } from "./common/SecondaryButton";
 
 export const QueryEditorPanel = () => {
   return (
@@ -21,7 +24,8 @@ export const QueryEditorPanel = () => {
           marginLeft: 2
         }}
       >
-        <PrimaryButton>Run</PrimaryButton>
+        <PrimaryButton startIcon={<PlayArrowIcon />}>Run Query</PrimaryButton>
+        <SecondaryButton startIcon={<SaveIcon />}>Save</SecondaryButton>
       </Stack>
 
       <Divider

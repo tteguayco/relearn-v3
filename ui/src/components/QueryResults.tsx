@@ -1,4 +1,3 @@
-import DataTable from 'react-data-table-component';
 
 type DataType = {
   id: number,
@@ -50,9 +49,6 @@ const data: DataType[] = [
 
 export const QueryResults = () => {
   return (
-    <DataTable
-        columns={columns}
-        data={data}
-    />
+    <></>
   );
 }
