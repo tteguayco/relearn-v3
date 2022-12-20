@@ -6,7 +6,7 @@ export const SQLTranslation = () => {
     <Box>
       <Editor
         width="95vh"
-        height="30vh"
+        // height="30vh"
         defaultLanguage="sql"
         defaultValue="SELECT * FROM table;"
         options={{
