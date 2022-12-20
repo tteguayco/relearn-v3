@@ -7,38 +7,66 @@ import { PrimaryButton } from "./common/PrimaryButton";
 import { ResultsPanel } from "./ResultsPanel";
 import { SecondaryButton } from "./common/SecondaryButton";
 import { ReflexContainer, ReflexElement, ReflexSplitter } from "react-reflex";
-import 'react-reflex/styles.css'
+import 'react-reflex/styles.css';
+import { BorderBottom, BorderColor } from "@mui/icons-material";
 
 export const QueryEditorPanel = () => {
   return (
-    <Box height="100vh" display="flex" flexDirection="column">
-      <Stack
+    <Box
+      height="85vh"
+      display="flex"
+      flexDirection="column"
+    >
+      {/* <Stack
         direction="row"
-        // justifyContent="flex-end"
+        justifyContent="flex-end"
         spacing={2}
         sx={{
-          margin: 2
+          padding: 1,
+          borderBottom: 2,
+          borderColor: "#EEEEEE"
+        }}
+      >
+        
+      </Stack> */}
+
+      <Stack
+        direction="row"
+        justifyContent="flex-end"
+        spacing={2}
+        sx={{
+          padding: 0.1,
+          margin: 2,
+          marginRight: 5,
+          // borderBottom: 2,
+          // borderColor: "#EEEEEE"
         }}
       >
         <PrimaryButton startIcon={<PlayArrowIcon />}>Run Query</PrimaryButton>
         <SecondaryButton startIcon={<SaveIcon />}>Save</SecondaryButton>
-      </Stack>      
+      </Stack>
       
       <ReflexContainer orientation="horizontal">
-        <ReflexElement>
+        <ReflexElement
+          minSize={50}
+        >
           <Editor
-            width="100vh"
             defaultLanguage="javascript"
             defaultValue="// Start writing your queries here"
+            options={{
+              minimap: { enabled: false }
+            }}
           />
           </ReflexElement>
 
-          <ReflexSplitter style={{
-            borderBottom: 0,
-            borderTop: 0
-          }} />
+          <ReflexSplitter
+            style={{
+              borderBottom: 0,
+              borderTop: 0
+            }}
+          />
 
-          <ReflexElement>
+          <ReflexElement minSize={50}>
             <ResultsPanel />
           </ReflexElement>
       </ReflexContainer>

@@ -12,7 +12,7 @@ export const MainLayout = ({ children }: Props) => {
     <Box height="100vh" display="flex" flexDirection="row">
       <CustomSidebar />
 
-      <Box width="100vh" height="5vh" display="flex" flexDirection="column">
+      <Box width="85vw" display="flex" flexDirection="column">
         <Topbar />
         {children}
       </Box>

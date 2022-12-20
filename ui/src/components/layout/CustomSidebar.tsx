@@ -42,7 +42,7 @@ export const CustomSidebar = () => {
   return (
     <Box height="100vh" display="flex">
       <Sidebar
-        width="280px"
+        width="15vw"
         backgroundColor="#004A7C"
       >
           <CustomMenu>
