@@ -18,6 +18,7 @@ const StyledButton = styled((props: StyledButtonProps) => (
   },
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
+  fontSize: 13
 }));
 
 interface Props {

@@ -18,6 +18,7 @@ const StyledButton = styled((props: StyledButtonProps) => (
   '&:hover': {
     backgroundColor: theme.palette.common.grey1,
   },
+  fontSize: 13,
 }));
 
 interface Props {

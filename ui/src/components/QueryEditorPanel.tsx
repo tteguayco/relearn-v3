@@ -1,5 +1,5 @@
 import Editor from "@monaco-editor/react";
-import { Divider, Stack } from "@mui/material";
+import { Divider, MenuItem, Select, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SaveIcon from '@mui/icons-material/Save';
@@ -8,7 +8,6 @@ import { ResultsPanel } from "./ResultsPanel";
 import { SecondaryButton } from "./common/SecondaryButton";
 import { ReflexContainer, ReflexElement, ReflexSplitter } from "react-reflex";
 import 'react-reflex/styles.css';
-import { BorderBottom, BorderColor } from "@mui/icons-material";
 
 export const QueryEditorPanel = () => {
   return (
@@ -42,6 +41,25 @@ export const QueryEditorPanel = () => {
           // borderColor: "#EEEEEE"
         }}
       >
+        <Typography
+          fontSize={12}
+          fontWeight={600}
+          display="flex"
+          alignItems="center"
+        >
+          LANGUAGE
+        </Typography>
+        <Select
+          value={1}
+          size="small"
+          sx={{
+            fontSize: 13
+          }}
+          // onChange={handleChange}
+        >
+          <MenuItem value={1}>Relational Algebra</MenuItem>
+        </Select>
+
         <PrimaryButton startIcon={<PlayArrowIcon />}>Run Query</PrimaryButton>
         <SecondaryButton startIcon={<SaveIcon />}>Save</SecondaryButton>
       </Stack>
