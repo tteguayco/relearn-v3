@@ -11,6 +11,7 @@ export const QueryEditor = () => {
         orientation="vertical"
       >
         <ReflexElement
+          size={320}
           minSize={200}
           maxSize={500}
         >

@@ -20,6 +20,7 @@ const palette = {
     main: "#E4ECFE"
   },
   common: {
+    greyBackground: "#FBFBFB",
     light: "#FEFFFD",
     dark: "#070D0D",
     dark1: "#515656",

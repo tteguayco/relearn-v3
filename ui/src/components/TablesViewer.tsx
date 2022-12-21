@@ -91,96 +91,112 @@ function StyledTreeItem(props: StyledTreeItemProps) {
 
 export const TablesViewer = () => {
   return (
-    <TreeView
-      aria-label="database"
-      defaultExpanded={['3']}
-      defaultCollapseIcon={<ArrowDropDownIcon />}
-      defaultExpandIcon={<ArrowRightIcon />}
-      defaultEndIcon={<div style={{ width: 24 }} />}
-      sx={{ height: 264, minWidth: 200, maxWidth: 400, }}
+    <Box
+      style={{
+        paddingTop: 20,
+        paddingLeft: 35,
+      }}
     >
-      <StyledTreeItem nodeId="4" labelText="Categories" labelIcon={GridOnIcon}>
+        <Typography
+          fontSize={12}
+          fontWeight={600}
+          display="flex"
+          alignItems="center"
+          color="#808080"
+        >
+          TABLES
+        </Typography>
+    </Box>
+    // <TreeView
+    //   aria-label="database"
+    //   defaultExpanded={['3']}
+    //   defaultCollapseIcon={<ArrowDropDownIcon />}
+    //   defaultExpandIcon={<ArrowRightIcon />}
+    //   defaultEndIcon={<div style={{ width: 24 }} />}
+    //   sx={{ height: 264, minWidth: 200, maxWidth: 400, }}
+    // >
+    //   <StyledTreeItem nodeId="4" labelText="Categories" labelIcon={GridOnIcon}>
 
         
-      </StyledTreeItem>
-      <StyledTreeItem nodeId="1" labelText="Categories" labelIcon={GridOnIcon}>
-        <StyledTreeItem
-          nodeId="5"
-          labelText="users"
-          labelIcon={GridOnIcon}
-          labelInfo="90"
-          color="#1a73e8"
-          bgColor="#e8f0fe"
-        />
-        <StyledTreeItem
-          nodeId="6"
-          labelText="subjects"
-          labelIcon={GridOnIcon}
-          labelInfo="2,294"
-          color="#e3742f"
-          bgColor="#fcefe3"
-        />
-        <StyledTreeItem
-          nodeId="7"
-          labelText="courses"
-          labelIcon={GridOnIcon}
-          labelInfo="3,566"
-          color="#a250f5"
-          bgColor="#f3e8fd"
-        />
-      </StyledTreeItem>
-      <StyledTreeItem nodeId="2" labelText="Categories" labelIcon={GridOnIcon}>
-        <StyledTreeItem
-          nodeId="5"
-          labelText="users"
-          labelIcon={GridOnIcon}
-          labelInfo="90"
-          color="#1a73e8"
-          bgColor="#e8f0fe"
-        />
-        <StyledTreeItem
-          nodeId="6"
-          labelText="subjects"
-          labelIcon={GridOnIcon}
-          labelInfo="2,294"
-          color="#e3742f"
-          bgColor="#fcefe3"
-        />
-        <StyledTreeItem
-          nodeId="7"
-          labelText="courses"
-          labelIcon={GridOnIcon}
-          labelInfo="3,566"
-          color="#a250f5"
-          bgColor="#f3e8fd"
-        />
-      </StyledTreeItem>
-      <StyledTreeItem nodeId="3" labelText="Categories" labelIcon={GridOnIcon}>
-        <StyledTreeItem
-          nodeId="5"
-          labelText="users"
-          labelIcon={GridOnIcon}
-          labelInfo="90"
-          color="#1a73e8"
-          bgColor="#e8f0fe"
-        />
-        <StyledTreeItem
-          nodeId="6"
-          labelText="subjects"
-          labelIcon={GridOnIcon}
-          labelInfo="2,294"
-          color="#e3742f"
-          bgColor="#fcefe3"
-        />
-        <StyledTreeItem
-          nodeId="7"
-          labelText="courses"
-          labelIcon={GridOnIcon}
-          labelInfo="3,566"
-          color="#a250f5"
-          bgColor="#f3e8fd"
-        />
-      </StyledTreeItem>
-    </TreeView>
+    //   </StyledTreeItem>
+    //   <StyledTreeItem nodeId="1" labelText="Categories" labelIcon={GridOnIcon}>
+    //     <StyledTreeItem
+    //       nodeId="5"
+    //       labelText="users"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="90"
+    //       color="#1a73e8"
+    //       bgColor="#e8f0fe"
+    //     />
+    //     <StyledTreeItem
+    //       nodeId="6"
+    //       labelText="subjects"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="2,294"
+    //       color="#e3742f"
+    //       bgColor="#fcefe3"
+    //     />
+    //     <StyledTreeItem
+    //       nodeId="7"
+    //       labelText="courses"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="3,566"
+    //       color="#a250f5"
+    //       bgColor="#f3e8fd"
+    //     />
+    //   </StyledTreeItem>
+    //   <StyledTreeItem nodeId="2" labelText="Categories" labelIcon={GridOnIcon}>
+    //     <StyledTreeItem
+    //       nodeId="5"
+    //       labelText="users"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="90"
+    //       color="#1a73e8"
+    //       bgColor="#e8f0fe"
+    //     />
+    //     <StyledTreeItem
+    //       nodeId="6"
+    //       labelText="subjects"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="2,294"
+    //       color="#e3742f"
+    //       bgColor="#fcefe3"
+    //     />
+    //     <StyledTreeItem
+    //       nodeId="7"
+    //       labelText="courses"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="3,566"
+    //       color="#a250f5"
+    //       bgColor="#f3e8fd"
+    //     />
+    //   </StyledTreeItem>
+    //   <StyledTreeItem nodeId="3" labelText="Categories" labelIcon={GridOnIcon}>
+    //     <StyledTreeItem
+    //       nodeId="5"
+    //       labelText="users"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="90"
+    //       color="#1a73e8"
+    //       bgColor="#e8f0fe"
+    //     />
+    //     <StyledTreeItem
+    //       nodeId="6"
+    //       labelText="subjects"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="2,294"
+    //       color="#e3742f"
+    //       bgColor="#fcefe3"
+    //     />
+    //     <StyledTreeItem
+    //       nodeId="7"
+    //       labelText="courses"
+    //       labelIcon={GridOnIcon}
+    //       labelInfo="3,566"
+    //       color="#a250f5"
+    //       bgColor="#f3e8fd"
+    //     />
+    //   </StyledTreeItem>
+    // </TreeView>
   )
 }

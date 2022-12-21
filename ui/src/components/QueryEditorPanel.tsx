@@ -1,11 +1,6 @@
 import Editor from "@monaco-editor/react";
-import { Divider, MenuItem, Select, Stack, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SaveIcon from '@mui/icons-material/Save';
-import { PrimaryButton } from "./common/PrimaryButton";
 import { ResultsPanel } from "./ResultsPanel";
-import { SecondaryButton } from "./common/SecondaryButton";
 import { ReflexContainer, ReflexElement, ReflexSplitter } from "react-reflex";
 import 'react-reflex/styles.css';
 import { EditorTopbar } from "./EditorTopbar";

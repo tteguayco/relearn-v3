@@ -6,7 +6,14 @@ import { SecondaryButton } from "./common/SecondaryButton";
 
 export const EditorTopbar = () => {
   return (
-    <Box display="flex" flexDirection="row" justifyContent="space-between">
+    <Box
+      display="flex"
+      flexDirection="row"
+      justifyContent="space-between"
+      sx={{
+        backgroundColor: "#FBFBFB"
+      }}
+    >
       <Stack
         direction="row"
         justifyContent="flex-end"
@@ -24,13 +31,14 @@ export const EditorTopbar = () => {
           fontWeight={600}
           display="flex"
           alignItems="center"
+          color="#004A7C"
         >
           LANGUAGE
         </Typography>
         <Select
           value={1}
           size="small"
-          sx={{ fontSize: 13 }}
+          sx={{ fontSize: 13, backgroundColor: '#FDFDFD' }}
           // onChange={handleChange}
         >
           <MenuItem value={1}>Relational Algebra</MenuItem>
