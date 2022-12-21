@@ -8,6 +8,7 @@ import { ResultsPanel } from "./ResultsPanel";
 import { SecondaryButton } from "./common/SecondaryButton";
 import { ReflexContainer, ReflexElement, ReflexSplitter } from "react-reflex";
 import 'react-reflex/styles.css';
+import { EditorTopbar } from "./EditorTopbar";
 
 export const QueryEditorPanel = () => {
   return (
@@ -16,6 +17,7 @@ export const QueryEditorPanel = () => {
       display="flex"
       flexDirection="column"
     >
+      {/* <EditorTabs /> */}
       {/* <Stack
         direction="row"
         justifyContent="flex-end"
@@ -29,46 +31,14 @@ export const QueryEditorPanel = () => {
         
       </Stack> */}
 
-      <Stack
-        direction="row"
-        justifyContent="flex-end"
-        spacing={2}
-        sx={{
-          padding: 0.1,
-          margin: 2,
-          marginRight: 5,
-          // borderBottom: 2,
-          // borderColor: "#EEEEEE"
-        }}
-      >
-        <Typography
-          fontSize={12}
-          fontWeight={600}
-          display="flex"
-          alignItems="center"
-        >
-          LANGUAGE
-        </Typography>
-        <Select
-          value={1}
-          size="small"
-          sx={{
-            fontSize: 13
-          }}
-          // onChange={handleChange}
-        >
-          <MenuItem value={1}>Relational Algebra</MenuItem>
-        </Select>
-
-        <PrimaryButton startIcon={<PlayArrowIcon />}>Run Query</PrimaryButton>
-        <SecondaryButton startIcon={<SaveIcon />}>Save</SecondaryButton>
-      </Stack>
+      <EditorTopbar />
       
       <ReflexContainer orientation="horizontal">
         <ReflexElement
           minSize={50}
         >
           <Editor
+            className="monaco-editor-target-language"
             defaultLanguage="javascript"
             defaultValue="// Start writing your queries here"
             options={{

@@ -9,3 +9,7 @@ html, body {
 button:focus {
   outline: none !important;
 }
+
+.monaco-editor-target-language {
+  border-top: 2px solid #EEEEEE;
+}
