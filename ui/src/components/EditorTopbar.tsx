@@ -11,6 +11,9 @@ export const EditorTopbar = () => {
       flexDirection="row"
       justifyContent="space-between"
       sx={{
+        padding: 1,
+        paddingLeft: 3,
+        paddingRight: 4,
         backgroundColor: "#FBFBFB"
       }}
     >
@@ -20,14 +23,12 @@ export const EditorTopbar = () => {
         spacing={2}
         sx={{
           padding: 0.1,
-          margin: 1.5,
-          marginLeft: 3,
           // borderBottom: 2,
           // borderColor: "#EEEEEE"
         }}
       >
         <Typography
-          fontSize={12}
+          fontSize={11}
           fontWeight={600}
           display="flex"
           alignItems="center"
@@ -41,7 +42,12 @@ export const EditorTopbar = () => {
           sx={{ fontSize: 13, backgroundColor: '#FDFDFD' }}
           // onChange={handleChange}
         >
-          <MenuItem value={1}>Relational Algebra</MenuItem>
+          <MenuItem
+            value={1}
+            sx={{
+              fontSize: 12
+            }}
+          >Relational Algebra</MenuItem>
         </Select>
       </Stack>
 
@@ -51,12 +57,10 @@ export const EditorTopbar = () => {
         spacing={2}
         sx={{
           padding: 0,
-          margin: 1.5,
-          marginRight: 4
         }}
       >
-        <PrimaryButton startIcon={<PlayArrowIcon />}>Run Query</PrimaryButton>
-        <SecondaryButton startIcon={<SaveIcon />}>Save</SecondaryButton>
+        <PrimaryButton size="small" startIcon={<PlayArrowIcon />}>Run Query</PrimaryButton>
+        <SecondaryButton size="small" startIcon={<SaveIcon />}>Save</SecondaryButton>
       </Stack>
     </Box>
   );

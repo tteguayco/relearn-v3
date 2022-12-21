@@ -3,16 +3,15 @@ import { Box } from "@mui/system";
 
 export const SQLTranslation = () => {
   return (
-    <Box>
       <Editor
-        width="95vh"
-        // height="30vh"
+        // width="100%"
+        // height="35vh"
         defaultLanguage="sql"
         defaultValue="SELECT * FROM table;"
         options={{
-          readOnly: true,
+          readOnly: false,
+          minimap: { enabled: false }
         }}
       />
-    </Box>
   )
 }

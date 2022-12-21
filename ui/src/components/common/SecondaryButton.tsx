@@ -18,12 +18,13 @@ const StyledButton = styled((props: StyledButtonProps) => (
   '&:hover': {
     backgroundColor: theme.palette.common.grey1,
   },
-  fontSize: 13,
+  fontSize: 12,
 }));
 
 interface Props {
   children: ReactNode,
-  startIcon: JSX.Element
+  startIcon: JSX.Element,
+  size?: string,
 };
 
 export const SecondaryButton = ({ children, ...props }: Props) => {

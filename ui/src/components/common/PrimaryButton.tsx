@@ -18,12 +18,13 @@ const StyledButton = styled((props: StyledButtonProps) => (
   },
   paddingLeft: theme.spacing(2),
   paddingRight: theme.spacing(2),
-  fontSize: 13
+  fontSize: 12
 }));
 
 interface Props {
   children: ReactNode,
-  startIcon: JSX.Element
+  startIcon: JSX.Element,
+  size?: string,
 };
 
 export const PrimaryButton = ({ children, ...props }: Props) => {

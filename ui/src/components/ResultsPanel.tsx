@@ -25,8 +25,8 @@ const StyledTabs = styled((props: StyledTabsProps) => (
     paddingLeft: theme.spacing(1),
   },
   '& .MuiTabs-indicatorSpan': {
-    // maxWidth: 40,
-    width: '80%',
+    width: '100%',
+    height: '100%',
     backgroundColor: theme.palette.primary.main,
   },
 }));
@@ -39,12 +39,10 @@ interface StyledTabProps {
 const StyledTab = styled((props: StyledTabProps) => (
   <Tab disableRipple {...props} />
 ))(({ theme }) => ({
-  paddingTop: theme.spacing(1),
-  paddingLeft: theme.spacing(4),  
-  paddingBottom: theme.spacing(0.5),
+  paddingLeft: theme.spacing(4),
   textTransform: 'none',
-  fontWeight: theme.typography.fontWeightRegular,
-  fontSize: theme.typography.pxToRem(15),
+  fontWeight: theme.typography.fontWeightBold,
+  fontSize: 12,
   marginRight: theme.spacing(1),
   color: '#969797',
   '&.Mui-selected': {
@@ -58,7 +56,8 @@ const StyledTab = styled((props: StyledTabProps) => (
 
 const enum TabValues {
   Results = "results",
-  SQLTranslation = "sqltranslation"
+  SQLTranslation = "sqltranslation",
+  Output = "output",
 };
 
 export const ResultsPanel = () => {
@@ -69,52 +68,38 @@ export const ResultsPanel = () => {
   };
 
   return (
-    <Box
-      display="flex"
-      flexDirection="row"
-      justifyContent="space-between"
-      sx={{
-        backgroundColor: '#FBFBFB',
-        borderBottom: '2px solid #EEEEEE'
-      }}
-    >
-      <Stack
-        direction="row"
-        justifyContent="flex-end"
-        spacing={2}
+    <TabContext value={value}>
+      <Box
+        display="flex"
+        flexDirection="row"
+        justifyContent="space-between"
         sx={{
-          padding: 0.1,
-          margin: 1.5,
-          marginLeft: 3,
-          // borderBottom: 2,
-          // borderColor: "#EEEEEE"
+          backgroundColor: '#FBFBFB',
+          borderBottom: '2px solid #EEEEEE',
         }}
       >
-        <Typography
-          fontSize={12}
-          fontWeight={600}
-          display="flex"
-          alignItems="center"
-          color="#000000"
+        <StyledTabs
+          value={value}
+          onChange={handleChange}
+          aria-label="results-tabs"
         >
-          OUTPUT
-        </Typography>
-        
+          <StyledTab value={TabValues.Results} label="RESULTS" />
+          <StyledTab value={TabValues.SQLTranslation} label="SQL" />
+          <StyledTab value={TabValues.Output} label="OUTPUT" />
+        </StyledTabs>
 
-      </Stack>
+          
+      </Box>
 
-      <Stack
-        direction="row"
-        justifyContent="flex-end"
-        spacing={2}
-        sx={{
-          padding: 0,
-          margin: 1.5,
-          marginRight: 4
-        }}
-      >
-
-      </Stack>
-    </Box>
+      <TabPanel value={TabValues.Results} style={{ padding: 0 }}>
+        <QueryResults />
+      </TabPanel>
+      <TabPanel value={TabValues.SQLTranslation} style={{ padding: 0 }}>
+        <SQLTranslation/>
+      </TabPanel>
+      <TabPanel value={TabValues.Output} style={{ padding: 0 }}>
+        Query executed successfully. Time: 0.33 ms
+      </TabPanel>
+    </TabContext>
   )
 }
