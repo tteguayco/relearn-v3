@@ -14,7 +14,7 @@ export const EditorTopbar = () => {
         padding: 1,
         paddingLeft: 3,
         paddingRight: 4,
-        backgroundColor: "#FBFBFB"
+        backgroundColor: "#FAFCFE"
       }}
     >
       <Stack

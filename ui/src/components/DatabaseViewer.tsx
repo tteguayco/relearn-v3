@@ -11,7 +11,7 @@ export const DatabaseViewer = () => {
       display="flex"
       flexDirection="column"
       sx={{
-        backgroundColor: '#FBFBFB',
+        backgroundColor: '#FAFCFE',
       }}
     >
       <ReflexContainer

@@ -35,7 +35,7 @@ export const QueryEditorPanel = () => {
           <Editor
             className="monaco-editor-target-language"
             defaultLanguage="javascript"
-            defaultValue="// Start writing your queries here"
+            defaultValue=""
             options={{
               minimap: { enabled: false }
             }}

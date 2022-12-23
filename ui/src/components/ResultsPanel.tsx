@@ -74,7 +74,7 @@ export const ResultsPanel = () => {
         flexDirection="row"
         justifyContent="space-between"
         sx={{
-          backgroundColor: '#FBFBFB',
+          backgroundColor: '#FAFCFE',
           borderBottom: '2px solid #EEEEEE',
         }}
       >

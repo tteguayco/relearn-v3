@@ -31,6 +31,7 @@ const palette = {
 export const theme = createTheme({
   palette,
   typography: {
+    fontSize: 12,
     button: {
       textTransform: 'none'
     }
