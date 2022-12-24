@@ -14,6 +14,8 @@ export const DatabaseViewer = () => {
         backgroundColor: '#FAFCFE',
       }}
     >
+      <DatabaseSelector />
+
       <ReflexContainer
         orientation="horizontal"
       >
@@ -22,7 +24,6 @@ export const DatabaseViewer = () => {
           minSize={100}
           maxSize={800}
         >
-          <DatabaseSelector />
           <TablesViewer />
         </ReflexElement>
 
@@ -31,7 +32,9 @@ export const DatabaseViewer = () => {
           borderBottom: 0
         }} />
 
-        <ReflexElement>
+        <ReflexElement
+          minSize={100}
+        >
           <SavedQueriesPanel />
         </ReflexElement>
       </ReflexContainer>

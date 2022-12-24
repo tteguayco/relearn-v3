@@ -35,7 +35,12 @@ export const QueryEditorPanel = () => {
           <Editor
             className="monaco-editor-target-language"
             defaultLanguage="javascript"
-            defaultValue=""
+            defaultValue="SELECT
+    *
+FROM
+    table
+WHERE
+    1 = 1;"
             options={{
               minimap: { enabled: false }
             }}
