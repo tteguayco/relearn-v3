@@ -13,9 +13,14 @@ export const MainLayout = ({ children }: Props) => {
 
   return (
     <Box height="100vh" display="flex" flexDirection="row">
-      <CustomSidebar />
+      {/* <CustomSidebar /> */}
 
-      <Box width={collapsed ? "95.5vw" : "85vw"} display="flex" flexDirection="column">
+      <Box
+        // width={collapsed ? "95.5vw" : "85vw"}
+        width="100vw"
+        display="flex"
+        flexDirection="column"
+      >
         <Topbar />
         {children}
       </Box>
