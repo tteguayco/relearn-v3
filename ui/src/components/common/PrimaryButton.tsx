@@ -11,9 +11,9 @@ const StyledButton = styled((props: StyledButtonProps) => (
   <Button {...props} />
 ))(({ theme }) => ({
   color: 'white',
-  backgroundColor: theme.palette.primary.main,
+  backgroundColor: '#54B498',
   '&:hover': {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: '#287c64',
     color: 'white',
   },
   paddingLeft: theme.spacing(2),
