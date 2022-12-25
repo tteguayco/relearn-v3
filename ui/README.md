@@ -17,4 +17,10 @@ $ npm i
 $ npm run dev
 ```
 
-## 
+## Configure Git Hooks
+
+Git Hooks for this project are powered by Husky:
+
+```
+$ npm run prepare
+```
