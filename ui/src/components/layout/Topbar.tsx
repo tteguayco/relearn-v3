@@ -1,5 +1,4 @@
-import { BorderBottom } from '@mui/icons-material'
-import { Box } from '@mui/material'
+import { Box } from '@mui/material';
 import React from 'react';
 
 export const Topbar = () => {
@@ -14,14 +13,10 @@ export const Topbar = () => {
         paddingLeft: 30,
         backgroundColor: '#00308F',
         backgroundImage: 'linear-gradient(to right, #00308F, #0066b2)',
-        borderBottom: '2px solid #EEEEEE'
+        borderBottom: '2px solid #EEEEEE',
       }}
     >
-      <img
-        src="relearn.png"
-        width={180}
-        height={35}
-      />
+      <img alt="logo" src="relearn.png" width={180} height={35} />
     </Box>
-  )
-}
+  );
+};

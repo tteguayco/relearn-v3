@@ -1,13 +1,21 @@
-import { ReactNode, useState } from 'react';
-import { Box, MenuItem, Select, SelectChangeEvent, Stack, SvgIcon, Typography } from "@mui/material";
+import { useState } from 'react';
+import {
+  Box,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  Stack,
+  Typography,
+} from '@mui/material';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SaveIcon from '@mui/icons-material/Save';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { PrimaryButton } from "./common/PrimaryButton";
-import { SecondaryButton } from "./common/SecondaryButton";
+import { PrimaryButton } from './common/PrimaryButton';
+import { SecondaryButton } from './common/SecondaryButton';
 
 export const EditorTopbar = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<string>('Relational Algebra');
+  const [selectedLanguage, setSelectedLanguage] =
+    useState<string>('Relational Algebra');
 
   const handleChange = (event: SelectChangeEvent) => {
     setSelectedLanguage(event.target.value as string);
@@ -22,7 +30,7 @@ export const EditorTopbar = () => {
         padding: 1,
         paddingLeft: 3,
         paddingRight: 4,
-        backgroundColor: "#FAFCFE"
+        backgroundColor: '#FAFCFE',
       }}
     >
       <Stack
@@ -57,7 +65,7 @@ export const EditorTopbar = () => {
             '.MuiOutlinedInput-notchedOutline': {
               borderColor: '#EEEEEE',
             },
-            "&:hover .MuiOutlinedInput-notchedOutline": {
+            '&:hover .MuiOutlinedInput-notchedOutline': {
               borderColor: '#EEEEEE',
             },
           }}
@@ -65,7 +73,7 @@ export const EditorTopbar = () => {
           <MenuItem
             value={1}
             sx={{
-              fontSize: 12
+              fontSize: 12,
             }}
           >
             Relational Algebra
@@ -81,9 +89,13 @@ export const EditorTopbar = () => {
           padding: 0,
         }}
       >
-        <PrimaryButton size="small" startIcon={<PlayArrowIcon />}>Run Query</PrimaryButton>
-        <SecondaryButton size="small" startIcon={<SaveIcon />}>Save</SecondaryButton>
+        <PrimaryButton size="small" startIcon={<PlayArrowIcon />}>
+          Run Query
+        </PrimaryButton>
+        <SecondaryButton size="small" startIcon={<SaveIcon />}>
+          Save
+        </SecondaryButton>
       </Stack>
     </Box>
   );
-}
+};

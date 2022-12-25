@@ -1,9 +1,9 @@
-import { Box } from "@mui/system";
-import { DatabaseViewer } from "../components/DatabaseViewer";
-import { QueryEditorPanel } from "../components/QueryEditorPanel";
-import { ReflexContainer, ReflexElement, ReflexSplitter } from "react-reflex";
+import { Box } from '@mui/system';
+import { DatabaseViewer } from '../components/DatabaseViewer';
+import { QueryEditorPanel } from '../components/QueryEditorPanel';
+import { ReflexContainer, ReflexElement, ReflexSplitter } from 'react-reflex';
 import 'react-reflex/styles.css';
-import { LoadingPlaceholder } from "../components/LoadingPlaceholder";
+import { LoadingPlaceholder } from '../components/LoadingPlaceholder';
 
 export const QueryEditor = () => {
   const loading = false;
@@ -19,21 +19,17 @@ export const QueryEditor = () => {
       {loading ? (
         <LoadingPlaceholder />
       ) : (
-        <ReflexContainer
-          orientation="vertical"
-        >
-          <ReflexElement
-            size={320}
-            minSize={200}
-            maxSize={500}
-          >
+        <ReflexContainer orientation="vertical">
+          <ReflexElement size={320} minSize={200} maxSize={500}>
             <DatabaseViewer />
           </ReflexElement>
 
-          <ReflexSplitter style={{
-            borderLeft: 0,
-            borderRight: 0
-          }} />
+          <ReflexSplitter
+            style={{
+              borderLeft: 0,
+              borderRight: 0,
+            }}
+          />
 
           <ReflexElement>
             <QueryEditorPanel />
@@ -42,4 +38,4 @@ export const QueryEditor = () => {
       )}
     </Box>
   );
-}
+};

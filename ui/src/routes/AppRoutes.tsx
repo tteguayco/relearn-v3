@@ -1,8 +1,5 @@
-
-
-import { Route, Routes } from 'react-router-dom'
-import { MainLayout } from '../components/layout/MainLayout'
-import { QueryEditor } from '../pages/QueryEditor'
+import { Route, Routes } from 'react-router-dom';
+import { QueryEditor } from '../pages/QueryEditor';
 
 export const AppRoutes = () => {
   return (
@@ -12,5 +9,5 @@ export const AppRoutes = () => {
         {/* <Route path="*" element={<NoMatch />} /> */}
       </Route>
     </Routes>
-  )
-}
+  );
+};

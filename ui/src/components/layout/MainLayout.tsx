@@ -1,16 +1,12 @@
-import { ReactNode } from "react";
-import { Box } from "@mui/system";
-import { CustomSidebar } from "./CustomSidebar";
-import { Topbar } from "./Topbar";
-import { useProSidebar } from "react-pro-sidebar";
+import { ReactNode } from 'react';
+import { Box } from '@mui/system';
+import { Topbar } from './Topbar';
 
 interface Props {
-  children?: ReactNode
+  children?: ReactNode;
 }
 
 export const MainLayout = ({ children }: Props) => {
-  const { collapsed } = useProSidebar();
-
   return (
     <Box height="100vh" display="flex" flexDirection="row">
       {/* <CustomSidebar /> */}
@@ -26,4 +22,4 @@ export const MainLayout = ({ children }: Props) => {
       </Box>
     </Box>
   );
-}
+};

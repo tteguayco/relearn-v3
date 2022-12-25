@@ -1,5 +1,5 @@
-import { Typography } from '@mui/material'
-import { Box } from '@mui/system'
+import { Typography } from '@mui/material';
+import { Box } from '@mui/system';
 
 export const SavedQueriesPanel = () => {
   return (
@@ -9,15 +9,15 @@ export const SavedQueriesPanel = () => {
         paddingLeft: 35,
       }}
     >
-        <Typography
-          fontSize={12}
-          fontWeight={600}
-          display="flex"
-          alignItems="center"
-          color="#808080"
-        >
-          SAVED QUERIES
-        </Typography>
+      <Typography
+        fontSize={12}
+        fontWeight={600}
+        display="flex"
+        alignItems="center"
+        color="#808080"
+      >
+        SAVED QUERIES
+      </Typography>
     </Box>
-  )
-}
+  );
+};

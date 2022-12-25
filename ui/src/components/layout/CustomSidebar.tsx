@@ -1,13 +1,13 @@
-import { Box, IconButton } from "@mui/material";
-import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
+import { Box, IconButton } from '@mui/material';
+import { Sidebar, Menu, MenuItem, useProSidebar } from 'react-pro-sidebar';
 import CodeIcon from '@mui/icons-material/Code';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 interface CustomMenuProps {
-  children: ReactNode
-};
+  children: ReactNode;
+}
 
 const CustomMenu = ({ children }: CustomMenuProps) => (
   <Menu
@@ -22,12 +22,12 @@ const CustomMenu = ({ children }: CustomMenuProps) => (
             marginRight: 15,
             paddingLeft: 10,
             borderRadius: 10,
-            ":hover": {
-              color: "#E4ECFE",
-              backgroundColor: "#003b63"
+            ':hover': {
+              color: '#E4ECFE',
+              backgroundColor: '#003b63',
             },
-            fontWeight: "bold",
-            fontSize: 14
+            fontWeight: 'bold',
+            fontSize: 14,
           };
       },
     }}
@@ -41,32 +41,29 @@ export const CustomSidebar = () => {
 
   return (
     <Box height="100vh" display="flex">
-      <Sidebar
-        width="15vw"
-        backgroundColor="#004A7C"
-      >
-          <CustomMenu>
-            <MenuItem icon={<CodeIcon fontSize="small" />}>Query Editor</MenuItem>
-          </CustomMenu>
+      <Sidebar width="15vw" backgroundColor="#004A7C">
+        <CustomMenu>
+          <MenuItem icon={<CodeIcon fontSize="small" />}>Query Editor</MenuItem>
+        </CustomMenu>
 
-          <IconButton
-            aria-label="collapse"
-            onClick={() => collapseSidebar()}
-            sx={{
-              position: "absolute",
-              bottom: 0,
-              right: 0,
-              margin: 2
-            }}
-          >
-            {collapsed ? (
-                <KeyboardDoubleArrowRightIcon color="info" />
-              ) : (
-                <KeyboardDoubleArrowLeftIcon color="info" />
-            )}
-          </IconButton>
+        <IconButton
+          aria-label="collapse"
+          onClick={() => collapseSidebar()}
+          sx={{
+            position: 'absolute',
+            bottom: 0,
+            right: 0,
+            margin: 2,
+          }}
+        >
+          {collapsed ? (
+            <KeyboardDoubleArrowRightIcon color="info" />
+          ) : (
+            <KeyboardDoubleArrowLeftIcon color="info" />
+          )}
+        </IconButton>
       </Sidebar>
       {/* <Outlet /> */}
     </Box>
   );
-}
+};

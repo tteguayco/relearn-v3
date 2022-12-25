@@ -1,8 +1,8 @@
-import { Box } from "@mui/system";
-import { ReflexContainer, ReflexElement, ReflexSplitter } from "react-reflex";
-import { DatabaseSelector } from "./DatabaseSelector";
-import { SavedQueriesPanel } from "./SavedQueriesPanel";
-import { TablesViewer } from "./TablesViewer";
+import { Box } from '@mui/system';
+import { ReflexContainer, ReflexElement, ReflexSplitter } from 'react-reflex';
+import { DatabaseSelector } from './DatabaseSelector';
+import { SavedQueriesPanel } from './SavedQueriesPanel';
+import { TablesViewer } from './TablesViewer';
 
 export const DatabaseViewer = () => {
   return (
@@ -16,28 +16,22 @@ export const DatabaseViewer = () => {
     >
       <DatabaseSelector />
 
-      <ReflexContainer
-        orientation="horizontal"
-      >
-        <ReflexElement
-          size={320}
-          minSize={100}
-          maxSize={800}
-        >
+      <ReflexContainer orientation="horizontal">
+        <ReflexElement size={320} minSize={100} maxSize={800}>
           <TablesViewer />
         </ReflexElement>
 
-        <ReflexSplitter style={{
-          borderTop: 0,
-          borderBottom: 0
-        }} />
+        <ReflexSplitter
+          style={{
+            borderTop: 0,
+            borderBottom: 0,
+          }}
+        />
 
-        <ReflexElement
-          minSize={100}
-        >
+        <ReflexElement minSize={100}>
           <SavedQueriesPanel />
         </ReflexElement>
       </ReflexContainer>
     </Box>
-  )
-}
+  );
+};

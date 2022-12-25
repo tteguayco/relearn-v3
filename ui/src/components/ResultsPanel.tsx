@@ -1,4 +1,4 @@
-import { Box, Stack, Tab, Tabs, Typography } from '@mui/material';
+import { Box, Tab, Tabs } from '@mui/material';
 import TabContext from '@mui/lab/TabContext';
 import { styled } from '@mui/material/styles';
 import { useState } from 'react';
@@ -33,7 +33,7 @@ const StyledTabs = styled((props: StyledTabsProps) => (
 
 interface StyledTabProps {
   label: string;
-  value: TabValues
+  value: TabValues;
 }
 
 const StyledTab = styled((props: StyledTabProps) => (
@@ -55,10 +55,10 @@ const StyledTab = styled((props: StyledTabProps) => (
 }));
 
 const enum TabValues {
-  Results = "results",
-  SQLTranslation = "sqltranslation",
-  Output = "output",
-};
+  Results = 'results',
+  SQLTranslation = 'sqltranslation',
+  Output = 'output',
+}
 
 export const ResultsPanel = () => {
   const [value, setValue] = useState<TabValues>(TabValues.Results);
@@ -87,19 +87,17 @@ export const ResultsPanel = () => {
           <StyledTab value={TabValues.SQLTranslation} label="SQL" />
           <StyledTab value={TabValues.Output} label="OUTPUT" />
         </StyledTabs>
-
-          
       </Box>
 
       <TabPanel value={TabValues.Results} style={{ padding: 0 }}>
         <QueryResults />
       </TabPanel>
       <TabPanel value={TabValues.SQLTranslation} style={{ padding: 0 }}>
-        <SQLTranslation/>
+        <SQLTranslation />
       </TabPanel>
       <TabPanel value={TabValues.Output} style={{ padding: 0 }}>
         Query executed successfully. Time: 0.33 ms
       </TabPanel>
     </TabContext>
-  )
-}
+  );
+};
