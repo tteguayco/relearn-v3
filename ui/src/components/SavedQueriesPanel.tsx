@@ -6,7 +6,7 @@ export const SavedQueriesPanel = () => {
     <Box
       style={{
         paddingTop: 20,
-        paddingLeft: 35,
+        paddingLeft: 30,
       }}
     >
       <Typography

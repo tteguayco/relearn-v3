@@ -14,7 +14,7 @@ export const DatabaseViewer = () => {
         backgroundColor: '#FAFCFE',
       }}
     >
-      <DatabaseSelector />
+      {/* <DatabaseSelector /> */}
 
       <ReflexContainer orientation="horizontal">
         <ReflexElement size={320} minSize={100} maxSize={800}>

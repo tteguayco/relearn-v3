@@ -39,8 +39,7 @@ export const EditorTopbar = () => {
         spacing={2}
         sx={{
           padding: 0.1,
-          // borderBottom: 2,
-          // borderColor: "#EEEEEE"
+          paddingLeft: 0.3,
         }}
       >
         <Typography
