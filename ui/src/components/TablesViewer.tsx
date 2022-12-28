@@ -42,7 +42,7 @@ const StyledTreeItemRoot = styled(TreeItem)(({ theme }) => ({
     },
     [`& .${treeItemClasses.label}`]: {
       fontWeight: 'inherit',
-      color: 'var(--tree-view-icon-color)',
+      color: 'var(--tree-view-icon-color)'
     },
   },
 }));
