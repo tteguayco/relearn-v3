@@ -4,9 +4,8 @@ import Typography from '@mui/material/Typography';
 import { TreeView } from '@mui/lab';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import TreeItem from '@mui/lab/TreeItem';
 import { styled } from '@mui/material/styles';
-import { TreeItemProps, treeItemClasses } from '@mui/lab/TreeItem';
+import TreeItem, { TreeItemProps, treeItemClasses } from '@mui/lab/TreeItem';
 import { SvgIconProps } from '@mui/material/SvgIcon';
 import StorageIcon from '@mui/icons-material/Storage';
 import TableViewIcon from '@mui/icons-material/TableView';
@@ -79,7 +78,7 @@ const StyledTreeItem = (props: StyledTreeItemProps) => {
       {...other}
     />
   );
-}
+};
 
 export const TablesViewer = () => {
   return (

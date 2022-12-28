@@ -1,6 +1,5 @@
 import { Box } from '@mui/system';
 import { ReflexContainer, ReflexElement, ReflexSplitter } from 'react-reflex';
-import { DatabaseSelector } from './DatabaseSelector';
 import { SavedQueriesPanel } from './SavedQueriesPanel';
 import { TablesViewer } from './TablesViewer';
 
