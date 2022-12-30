@@ -114,7 +114,7 @@ export const TablesViewer = () => {
         alignItems="center"
         color="#808080"
       >
-        DATABASES
+        DATABASE EXPLORER
       </Typography>
 
       <TreeView

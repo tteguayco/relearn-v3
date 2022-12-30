@@ -14,10 +14,9 @@ import { PrimaryButton } from './common/PrimaryButton';
 import { SecondaryButton } from './common/SecondaryButton';
 
 export const EditorTopbar = () => {
-  const [selectedLanguage, setSelectedLanguage] =
-    useState<string>('Relational Algebra');
+  const [selectedLanguage, setSelectedLanguage] = useState<string>('Relational Algebra');
 
-  const handleChange = (event: SelectChangeEvent) => {
+  const handleSelectedLanguageChange = (event: SelectChangeEvent) => {
     setSelectedLanguage(event.target.value as string);
   };
 
@@ -35,7 +34,7 @@ export const EditorTopbar = () => {
     >
       <Stack
         direction="row"
-        justifyContent="flex-end"
+        justifyContent="start-end"
         spacing={2}
         sx={{
           padding: 0.1,
@@ -53,7 +52,7 @@ export const EditorTopbar = () => {
         </Typography>
         <Select
           value={selectedLanguage}
-          onChange={handleChange}
+          onChange={handleSelectedLanguageChange}
           // defaultValue={1}
           size="small"
           IconComponent={KeyboardArrowDownIcon}
@@ -95,6 +94,7 @@ export const EditorTopbar = () => {
           Save
         </SecondaryButton>
       </Stack>
+
     </Box>
   );
 };
