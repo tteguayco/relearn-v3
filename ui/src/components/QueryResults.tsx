@@ -1,5 +1,5 @@
 
-import { DataEditor, GridCell, GridCellKind, GridColumn, Item, DataEditorContainer } from "@glideapps/glide-data-grid";
+import { DataEditor, GridCell, GridCellKind, GridColumn, Item } from "@glideapps/glide-data-grid";
 import "@glideapps/glide-data-grid/dist/index.css";
 
 const columns: GridColumn[] = [
@@ -31,8 +31,7 @@ const getData = ([col]: Item): GridCell => {
 
 export const QueryResults = () => {
   return (
-    <DataEditorContainer width={500} height={500}>
-      <DataEditor
+    <DataEditor
         width={5000}
         height={5000}
         rowMarkers="number"
@@ -40,6 +39,5 @@ export const QueryResults = () => {
         columns={columns}
         rows={20}
       />
-    </DataEditorContainer>
   );
 };
