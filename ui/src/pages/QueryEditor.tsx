@@ -31,7 +31,10 @@ export const QueryEditor = () => {
             }}
           />
 
-          <ReflexElement>
+          <ReflexElement
+            minSize={50}
+            style={{ overflowY: 'hidden' }}
+          >
             <QueryEditorPanel />
           </ReflexElement>
         </ReflexContainer>

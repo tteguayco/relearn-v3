@@ -12,12 +12,15 @@ const StyledButton = styled((props: StyledButtonProps) => (
 ))(({ theme }) => ({
   color: theme.palette.common.dark,
   backgroundColor: theme.palette.common.grey1,
-  paddingLeft: theme.spacing(2),
-  paddingRight: theme.spacing(2),
   fontWeight: 'bold',
   '&:hover': {
     backgroundColor: theme.palette.common.grey1,
+    color: 'grey',
   },
+  paddingLeft: theme.spacing(2),
+  paddingRight: theme.spacing(2),
+  marginTop: theme.spacing(0.2),
+  marginBottom: theme.spacing(0.2),
   fontSize: 12,
 }));
 

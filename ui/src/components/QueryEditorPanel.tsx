@@ -1,13 +1,10 @@
 import { useState } from 'react';
-import Editor from '@monaco-editor/react';
 import { Box } from '@mui/system';
-import { ResultsPanel } from './ResultsPanel';
-import { ReflexContainer, ReflexElement, ReflexSplitter } from 'react-reflex';
-import { EditorTopbar } from './EditorTopbar';
-import { IconButton, Stack, Tab, Tabs, tabsClasses, Typography } from '@mui/material';
+import { IconButton, Stack, Tab, Tabs, tabsClasses } from '@mui/material';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import CloseIcon from '@mui/icons-material/Close';
 import 'react-reflex/styles.css';
+import { QueryEditorPanelContent } from './QueryEditorPanelContent';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -20,7 +17,7 @@ const TabPanel = (props: TabPanelProps) => {
 
   return (
     <Box
-      height="100%"
+      className="lol"
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
@@ -28,9 +25,9 @@ const TabPanel = (props: TabPanelProps) => {
       {...other}
     >
       {value === index && (
-        <Box>
-          <Typography>{children}</Typography>
-        </Box>
+        <>
+          {children}
+        </>
       )}
     </Box>
   );
@@ -46,6 +43,7 @@ export const QueryEditorPanel = () => {
   return (
     <Box
       height="85vh"
+      maxHeight="85vh"
       display="flex"
       flexDirection="column"
     >
@@ -133,39 +131,7 @@ export const QueryEditorPanel = () => {
         value={selectedSheetIndex}
         index={0}
       >
-
-        <EditorTopbar />
-
-        <ReflexContainer orientation="horizontal">
-          <ReflexElement minSize={50}>
-            <Editor
-              className="monaco-editor-target-language"
-              defaultLanguage="javascript"
-              defaultValue="SELECT
-  *
-FROM
- table
-WHERE
-  1 = 1;"
-              options={{
-                minimap: { enabled: false },
-              }}
-            />
-          </ReflexElement>
-
-          <ReflexSplitter
-            style={{
-              borderBottom: 0,
-              borderTop: 0,
-            }}
-          />
-
-          <ReflexElement minSize={50}>
-            <ResultsPanel />
-          </ReflexElement>
-        </ReflexContainer>
-
-
+        <QueryEditorPanelContent />
       </TabPanel>
       
 
