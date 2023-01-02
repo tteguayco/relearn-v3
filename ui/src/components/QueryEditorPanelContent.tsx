@@ -18,11 +18,11 @@ export const QueryEditorPanelContent = () => {
               className="monaco-editor-target-language"
               defaultLanguage="javascript"
               defaultValue="SELECT
-        *
-        FROM
-        table
-        WHERE
-        1 = 1;"
+  *
+FROM
+  table
+WHERE
+  1 = 1;"
             options={{
                 minimap: { enabled: false },
             }}
@@ -36,7 +36,10 @@ export const QueryEditorPanelContent = () => {
             }}
         />
 
-        <ReflexElement minSize={10}>
+        <ReflexElement
+          minSize={10}
+          style={{ overflowY: 'hidden' }}
+        >
           <ResultsPanel />
         </ReflexElement>
       </ReflexContainer>

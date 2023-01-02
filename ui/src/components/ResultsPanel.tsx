@@ -85,17 +85,32 @@ export const ResultsPanel = () => {
         >
           <StyledTab value={TabValues.Results} label="RESULTS" />
           <StyledTab value={TabValues.SQLTranslation} label="SQL" />
-          <StyledTab value={TabValues.Output} label="OUTPUT" />
+          <StyledTab value={TabValues.Output} label="MESSAGES" />
         </StyledTabs>
       </Box>
 
       <TabPanel value={TabValues.Results} style={{ padding: 0 }}>
         <QueryResults />
       </TabPanel>
-      <TabPanel value={TabValues.SQLTranslation} style={{ padding: 0 }}>
-        <SQLTranslation />
+      
+      <TabPanel
+        value={TabValues.SQLTranslation}
+        style={{ padding: 0, paddingTop: 10 }}
+      >
+        <Box height="35vh">
+          <SQLTranslation />
+        </Box>
       </TabPanel>
-      <TabPanel value={TabValues.Output} style={{ padding: 0 }}>
+      
+      <TabPanel
+        value={TabValues.Output}
+        style={{
+          padding: 20,
+          paddingTop: 15,
+          fontFamily: 'monospace',
+          fontSize: 14,
+        }}
+      >
         Query executed successfully. Time: 0.33 ms
       </TabPanel>
     </TabContext>
