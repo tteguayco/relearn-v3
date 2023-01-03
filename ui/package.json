@@ -23,6 +23,7 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/lab": "^5.0.0-alpha.112",
     "@mui/material": "^5.11.0",
+    "@react-hook/resize-observer": "^1.2.6",
     "@supabase/supabase-js": "^2.2.0",
     "lodash": "^4.17.21",
     "marked": "^4.2.5",

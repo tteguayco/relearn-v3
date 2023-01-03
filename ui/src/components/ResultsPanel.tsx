@@ -89,17 +89,18 @@ export const ResultsPanel = () => {
         </StyledTabs>
       </Box>
 
-      <TabPanel value={TabValues.Results} style={{ padding: 0 }}>
+      <TabPanel
+        value={TabValues.Results}
+        style={{ padding: 0, height: '100%' }}
+      >
         <QueryResults />
       </TabPanel>
       
       <TabPanel
         value={TabValues.SQLTranslation}
-        style={{ padding: 0, paddingTop: 10 }}
+        style={{ padding: 0, paddingTop: 10, height: '100%' }}
       >
-        <Box height="35vh">
-          <SQLTranslation />
-        </Box>
+        <SQLTranslation />
       </TabPanel>
       
       <TabPanel

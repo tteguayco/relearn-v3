@@ -1,6 +1,9 @@
 
 import { DataEditor, GridCell, GridCellKind, GridColumn, Item } from "@glideapps/glide-data-grid";
 import "@glideapps/glide-data-grid/dist/index.css";
+import { Box } from "@mui/system";
+import { useEffect, useMemo, useRef } from "react";
+import { useResize } from "../hooks/useResize";
 
 const columns: GridColumn[] = [
   { title: "First Name", width: 100 },
@@ -30,14 +33,24 @@ const getData = ([col]: Item): GridCell => {
 };
 
 export const QueryResults = () => {
+  const containerRef = useRef<HTMLInputElement>(null);
+
+  const { size } = useResize(containerRef);
+
   return (
-    <DataEditor
-        width={5000}
-        height={5000}
+    <Box
+      ref={containerRef}
+      sx={{ height: '100%' }}
+    >
+      <DataEditor
+        smoothScrollY={true}
+        width={size?.width}
+        height={size?.height}
         rowMarkers="number"
         getCellContent={getData}
         columns={columns}
-        rows={20}
+        rows={5}
       />
+    </Box>
   );
 };
