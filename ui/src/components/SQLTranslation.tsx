@@ -10,14 +10,14 @@ export const SQLTranslation = () => {
   return (
     <Box
       ref={containerRef}
+      sx={{ height: '90%' }}
     >
       <Editor
-        // width={size?.width}
         height={size?.height}
         defaultLanguage="sql"
         defaultValue="SELECT * FROM table;"
         options={{
-          readOnly: false,
+          readOnly: true,
           minimap: { enabled: false },
         }}
       />

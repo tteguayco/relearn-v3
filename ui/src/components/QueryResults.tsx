@@ -2,7 +2,7 @@
 import { DataEditor, GridCell, GridCellKind, GridColumn, Item } from "@glideapps/glide-data-grid";
 import "@glideapps/glide-data-grid/dist/index.css";
 import { Box } from "@mui/system";
-import { useEffect, useMemo, useRef } from "react";
+import { useRef } from "react";
 import { useResize } from "../hooks/useResize";
 
 const columns: GridColumn[] = [

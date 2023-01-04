@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs } from '@mui/material';
+import { Box, Tab, Tabs, tabsClasses } from '@mui/material';
 import TabContext from '@mui/lab/TabContext';
 import { styled } from '@mui/material/styles';
 import { useState } from 'react';
@@ -22,7 +22,6 @@ const StyledTabs = styled((props: StyledTabsProps) => (
     display: 'flex',
     justifyContent: 'center',
     backgroundColor: 'transparent',
-    paddingLeft: theme.spacing(1),
   },
   '& .MuiTabs-indicatorSpan': {
     width: '100%',
@@ -39,10 +38,13 @@ interface StyledTabProps {
 const StyledTab = styled((props: StyledTabProps) => (
   <Tab disableRipple {...props} />
 ))(({ theme }) => ({
-  paddingLeft: theme.spacing(4),
+  height: 40,
+  minHeight: 40,
+  padding: 0,
   textTransform: 'none',
   fontWeight: theme.typography.fontWeightBold,
   fontSize: 12,
+  marginLeft: theme.spacing(1),
   marginRight: theme.spacing(1),
   color: '#969797',
   '&.Mui-selected': {
@@ -76,12 +78,23 @@ export const ResultsPanel = () => {
         sx={{
           backgroundColor: '#FAFCFE',
           borderBottom: '2px solid #EEEEEE',
+          height: 40,
         }}
       >
         <StyledTabs
           value={value}
           onChange={handleChange}
           aria-label="results-tabs"
+          // sx={{ height: 40 }}
+          sx={{
+            [`& .${tabsClasses.scrollButtons}`]: {
+              '&.Mui-disabled': {
+                opacity: 0.3,
+              },
+            },
+            height: 40,
+            minHeight: 40
+          }}
         >
           <StyledTab value={TabValues.Results} label="RESULTS" />
           <StyledTab value={TabValues.SQLTranslation} label="SQL" />
@@ -91,7 +104,7 @@ export const ResultsPanel = () => {
 
       <TabPanel
         value={TabValues.Results}
-        style={{ padding: 0, height: '100%' }}
+        style={{ padding: 0,height: '100%' }}
       >
         <QueryResults />
       </TabPanel>

@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import { Box } from '@mui/system';
-import { IconButton, Stack, Tab, Tabs, tabsClasses } from '@mui/material';
-import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
-import CloseIcon from '@mui/icons-material/Close';
+import { Stack, Tabs, tabsClasses } from '@mui/material';
 import 'react-reflex/styles.css';
 import { QueryEditorPanelContent } from './QueryEditorPanelContent';
+import SheetTab from './common/SheetTab';
 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
-}
+};
 
 const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...other } = props;
@@ -24,11 +23,9 @@ const TabPanel = (props: TabPanelProps) => {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <>
-          {children}
-        </>
-      )}
+      <>
+        {children}
+      </>
     </Box>
   );
 };
@@ -75,54 +72,13 @@ export const QueryEditorPanel = () => {
           TabIndicatorProps={{
             sx: {
               height: 2, // indicator line thickness
-              // backgroundColor: 'yellow', // for the color of indicator
+              // backgroundColor: 'yellow', // for the color of the indicator
             }
           }}
         >
-          <Tab
-            icon={<HistoryEduIcon style={{ color: 'black' }} />}
-            iconPosition="start"
-            label={
-              <span
-                style={{
-                  display: 'contents',
-                  color: 'black',
-                  fontWeight: 'bold',
-                  paddingLeft: 2,
-                }}
-              >
-                Untitled 1
-                <IconButton
-                  // size="small"
-                  sx={{
-                    marginLeft: 2,
-                    width: 12,
-                    height: 12,
-                  }}
-                  // onClick={}
-                >
-                  <CloseIcon style={{ fontSize: 12 }} />
-                </IconButton>
-              </span>
-            }
-            sx={{
-              height: 40,
-              minHeight: 40,
-            }}
-          />
-          <Tab
-            icon={<HistoryEduIcon />}
-            iconPosition="start"
-            label="Untitled 2"
-            sx={{
-              height: 40,
-              minHeight: 40,
-              backgroundColor: '#F3F4F6',
-              '&.Mui-selected': {
-                backgroundColor: 'yellow'
-              },
-            }}
-          />
+          <SheetTab index={0} selectedIndex={selectedSheetIndex} title="Untitled 1" />
+          <SheetTab index={1} selectedIndex={selectedSheetIndex} title="Untitled 2" />
+          
           {/* <Button variant="outlined" startIcon={<AddIcon />} /> */}
         </Tabs>
       </Stack>
@@ -133,7 +89,6 @@ export const QueryEditorPanel = () => {
       >
         <QueryEditorPanelContent />
       </TabPanel>
-      
 
     </Box>
   );
